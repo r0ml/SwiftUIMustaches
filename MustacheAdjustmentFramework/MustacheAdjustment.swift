@@ -10,8 +10,8 @@ import Foundation
 import Photos
 import UIKit
 
-let MustacheAdjustmentDataFormatIdentifier = "com.elpassion.SwiftMustaches.MustacheAdjustment"
-let MustacheAdjustmentDataFormatVersion = "0.2"
+let MustacheAdjustmentDataFormatIdentifier = "software.tinker.SwiftMustaches.MustacheAdjustment"
+let MustacheAdjustmentDataFormatVersion = "1.0"
 
 
 public class MustacheAdjustment {

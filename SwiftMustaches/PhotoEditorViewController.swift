@@ -10,7 +10,7 @@ import UIKit
 import Photos
 import MustacheAdjustmentFramework
 
-@objc public class PhotoEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver {
+public class PhotoEditorViewController: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver {
 
     
     @IBOutlet weak var photoImageView: UIImageView!
@@ -64,9 +64,8 @@ import MustacheAdjustmentFramework
       return UIStatusBarStyle.lightContent
     }
     
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        
+    public func viewDidLoad() {
+
         activityIndicatorContainerView.layer.cornerRadius = 10
         updateUI()
       PHPhotoLibrary.shared().register(self)
@@ -94,7 +93,7 @@ import MustacheAdjustmentFramework
   @MainActor private func presentErrorAlertView(message: String) -> Void {
     let alertController = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-    self.present(alertController, animated: true, completion: nil)
+//    self.present(alertController, animated: true)
     }
     
     // MARK: - UI Actions
@@ -113,12 +112,13 @@ import MustacheAdjustmentFramework
     
     // MARK: - Opening photo
     
-    private func openPhoto() {
+    public func openPhoto() {
         let imagePicker = UIImagePickerController()
       imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
         imagePicker.delegate = self
+      
         loading = true
-      present(imagePicker, animated: true, completion: nil)
+//      present(imagePicker, animated: true)
     }
 
    @MainActor private func loadAsset(asset: PHAsset?, completion: (() -> Void)?) {
@@ -291,7 +291,7 @@ import MustacheAdjustmentFramework
             return
         }
         
-      dismiss(animated: true, completion: nil)
+//      dismiss(animated: true)
         
       loadAsset(asset: asset, completion: { [weak self] () -> Void in
             self?.loading = false
@@ -300,7 +300,7 @@ import MustacheAdjustmentFramework
     }
     
   public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-      dismiss(animated: true, completion: nil)
+//      dismiss(animated: true)
         loading = false
     }
     
