@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 EL Passion. All rights reserved.
 //
 
-import UIKit
+// import UIKit
+import CoreGraphics
+import Foundation
 
 public class MustachePosition: NSObject, NSCoding {
     

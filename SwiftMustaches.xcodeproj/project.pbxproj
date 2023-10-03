@@ -12,19 +12,17 @@
 		31A7DB4619CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */; };
 		31A7DB5419CEFB980081C234 /* MustacheAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */; };
-		31A7DB5819CEFC510081C234 /* UIImage+ImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5619CEFC510081C234 /* UIImage+ImageOrientation.swift */; };
 		31A7DB5919CEFC510081C234 /* UIImage+RotatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5719CEFC510081C234 /* UIImage+RotatedImage.swift */; };
-		31A7DB5A19CEFC8B0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; };
-		31AE5EB119CB7E9400364087 /* PhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE5EB019CB7E9400364087 /* PhotoEditorViewController.swift */; };
+		31A7DB5A19CEFC8B0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; platformFilter = ios; };
 		31E6414D19CAD4C10041421D /* SwiftMustaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6414C19CAD4C10041421D /* SwiftMustaches.swift */; };
 		31E6415419CAD4C10041421D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
 		31E6417619CADC100041421D /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E6417519CADC100041421D /* PhotosUI.framework */; };
 		31E6417819CADC100041421D /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E6417719CADC100041421D /* Photos.framework */; };
 		31E6417D19CADC100041421D /* PhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6417C19CADC100041421D /* PhotoEditorViewController.swift */; };
-		31E6417F19CADC100041421D /* PhotoEditor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31E6417E19CADC100041421D /* PhotoEditor.storyboard */; };
 		31E6418219CADC100041421D /* MustachePhotoEditingExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 31E6417319CADC100041421D /* MustachePhotoEditingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		31ED765F19CB1CA7007365DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
 		E7E6E8042ACB1F0600ED9E0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */; };
+		E7E6E8072ACBD5AA00ED9E0D /* MustacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +83,6 @@
 		31A7DB5619CEFC510081C234 /* UIImage+ImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageOrientation.swift"; sourceTree = "<group>"; };
 		31A7DB5719CEFC510081C234 /* UIImage+RotatedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RotatedImage.swift"; sourceTree = "<group>"; };
 		31AE5EB019CB7E9400364087 /* PhotoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEditorViewController.swift; sourceTree = "<group>"; };
-		31AE5EB219CB7ECA00364087 /* PhotoEditor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoEditor.storyboard; sourceTree = "<group>"; };
 		31E6414719CAD4C10041421D /* SwiftMustaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMustaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E6414B19CAD4C10041421D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31E6414C19CAD4C10041421D /* SwiftMustaches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMustaches.swift; sourceTree = "<group>"; };
@@ -97,6 +94,8 @@
 		31E6417C19CADC100041421D /* PhotoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotoEditorViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		31E6417E19CADC100041421D /* PhotoEditor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoEditor.storyboard; sourceTree = "<group>"; };
 		E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E7E6E8052ACBB5E200ED9E0D /* SwiftMustaches.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftMustaches.entitlements; sourceTree = "<group>"; };
+		E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,11 +164,12 @@
 		31E6414919CAD4C10041421D /* SwiftMustaches */ = {
 			isa = PBXGroup;
 			children = (
+				E7E6E8052ACBB5E200ED9E0D /* SwiftMustaches.entitlements */,
 				31E6414B19CAD4C10041421D /* Info.plist */,
 				31E6414C19CAD4C10041421D /* SwiftMustaches.swift */,
 				E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */,
+				E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */,
 				31E6415319CAD4C10041421D /* Images.xcassets */,
-				31AE5EB219CB7ECA00364087 /* PhotoEditor.storyboard */,
 				31AE5EB019CB7E9400364087 /* PhotoEditorViewController.swift */,
 			);
 			path = SwiftMustaches;
@@ -327,7 +327,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31E6417F19CADC100041421D /* PhotoEditor.storyboard in Resources */,
 				31ED765F19CB1CA7007365DC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +341,6 @@
 				310636CC19CF2D0900B04125 /* FaceDetector.swift in Sources */,
 				31A7DB5419CEFB980081C234 /* MustacheAdjustment.swift in Sources */,
 				31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */,
-				31A7DB5819CEFC510081C234 /* UIImage+ImageOrientation.swift in Sources */,
 				31A7DB5919CEFC510081C234 /* UIImage+RotatedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,9 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31AE5EB119CB7E9400364087 /* PhotoEditorViewController.swift in Sources */,
 				31E6414D19CAD4C10041421D /* SwiftMustaches.swift in Sources */,
 				E7E6E8042ACB1F0600ED9E0D /* ContentView.swift in Sources */,
+				E7E6E8072ACBD5AA00ED9E0D /* MustacheView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +379,7 @@
 		};
 		E7E6E8022ACB1E6900ED9E0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 31A7DB3019CEFACA0081C234 /* MustacheAdjustmentFramework */;
 			targetProxy = E7E6E8012ACB1E6900ED9E0D /* PBXContainerItemProxy */;
 		};
@@ -417,6 +416,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -446,6 +449,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -572,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftMustaches/SwiftMustaches.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MHEBPE6SV2;
@@ -589,7 +597,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -602,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftMustaches/SwiftMustaches.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MHEBPE6SV2;
@@ -619,7 +627,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5131d531-8712-4f2c-acbb-6406706c3e5a";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -649,6 +656,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -670,6 +681,10 @@
 				PROVISIONING_PROFILE = "56d5e05a-829f-47db-853c-33a6759b3223";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

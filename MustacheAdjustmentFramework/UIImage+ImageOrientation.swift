@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 EL Passion. All rights reserved.
 //
 
-import UIKit
+// import UIKit
 
-public extension UIImage {
+public extension XImage {
     
-  class func orientationPropertyValueFromImageOrientation(imageOrientation: UIImage.Orientation) -> Int {
+  class func orientationPropertyValueFromImageOrientation(imageOrientation: XImage.Orientation) -> Int {
         var orientation: Int = 0
         switch imageOrientation {
         case .up:

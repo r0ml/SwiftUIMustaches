@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 EL Passion. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 import Photos
 import PhotosUI
@@ -150,3 +151,5 @@ class PhotoEditorViewController: UIViewController, PHContentEditingController {
     }
 
 }
+#endif
+

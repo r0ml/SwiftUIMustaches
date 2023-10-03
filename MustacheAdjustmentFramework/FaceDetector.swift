@@ -6,12 +6,17 @@
 //  Copyright (c) 2014 EL Passion. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+#else
+import AppKit
+#endif
+
 import CoreImage
 
-class FaceDetector {
+public class FaceDetector {
     
-    class func detectFaces(inImage image: UIImage) -> [CIFaceFeature] {
+    class func detectFaces(inImage image: XImage) -> [CIFaceFeature] {
         let detector = CIDetector(
             ofType: CIDetectorTypeFace,
             context: nil,

@@ -8,15 +8,21 @@
 
 import Foundation
 import Photos
-import UIKit
+// import UIKit
+import SwiftUI
 
-let MustacheAdjustmentDataFormatIdentifier = "software.tinker.SwiftMustaches.MustacheAdjustment"
-let MustacheAdjustmentDataFormatVersion = "1.0"
+
+
+// Switch to using Vision framework for face detection
+
+// Use the mustache placement info to draw mustaches on the image.  That gets down in ContentView?
+
+
 
 
 public class MustacheAdjustment {
     
-    public let mustacheImage: UIImage = UIImage(named: "mustache")!
+    public let mustacheImage: XImage = XImage(named: "mustache")!
     public let mustachePositions: [MustachePosition]
     
     // MARK: - Initialization
@@ -34,7 +40,7 @@ public class MustacheAdjustment {
         }
     }
     
-    public init?(image: UIImage) {
+    public init?(image: XImage) {
         var mustachePositions: [MustachePosition] = []
         
         for faceFeature in FaceDetector.detectFaces(inImage: image) {
@@ -65,7 +71,13 @@ public class MustacheAdjustment {
             data: data)
     }
     
-    public func applyAdjustment(inputImage: UIImage) -> UIImage {
+    @MainActor public func applyAdjustment(inputImage: XImage) -> XImage {
+      
+      let z = ImageRenderer(content: Image(xImage: inputImage))
+      z.scale = 2
+      let k = z.xImage
+      
+      
         UIGraphicsBeginImageContextWithOptions(inputImage.size, true, inputImage.scale)
         _ = UIGraphicsGetCurrentContext()
       inputImage.draw(at: CGPointZero)
