@@ -4,6 +4,7 @@
 import SwiftUI
 import PhotosUI
 import MustacheAdjustmentFramework
+import Vision
 
 /*
 #if os(macOS)
@@ -26,11 +27,51 @@ extension Image {
 struct ContentView : View {
   @State var originalImage : XImage = XImage()
   @State var thePhoto : PhotosPickerItem?
+  
+  let mustacheImage: XImage = XImage(named: "mustache")!
+
+  @State var faces : [VNFaceObservation] = []
+  
 //  let pevc = PhotoEditorViewController()
+  
+  func zz(_ xmin : CGFloat, _ xmax: CGFloat ) -> CGFloat {
+    let ar : CGFloat = CGFloat(mustacheImage.size.height) / CGFloat(mustacheImage.size.width)
+    return ( ( (xmax - xmin) *  ar ) / 2)
+  }
+  
+  func overlay(_ g : CGSize) -> some View {
+    ForEach(faces, id: \.self) { z in
+      if let kk = z.landmarks?.outerLips,
+         let xmin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.x < $1.x})?.x,
+         let xmax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.x < $1.x})?.x,
+
+        let ymin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.y < $1.y})?.y,
+        let ymax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.y < $1.y})?.y,
+         let roll = z.roll?.doubleValue,
+         let yaw = z.yaw?.doubleValue {
+        //  let pitch = z.pitch?.doubleValue {
+
+        // let mh = (xmax - xmin) * (mustacheImage.size.y / mustacheImage.size.x)
+        Image(xImage: mustacheImage).resizable().scaledToFit()
+          .frame(width: (xmax - xmin)   /* , height: ymax - ymin */ )
+          .rotationEffect( Angle(radians: -roll), anchor: .center )
+        // FIXME: if the position is modified after the rotation, the position offsets need to be adjusted for the
+        // rotation
+        // the adjustment is the cos of the
+          .position(x: (xmin+xmax) /  2 , // * (1 - CGFloat(cos(-roll))),
+                    y: g.height - ymax - zz(xmin, xmax) ) // - (ymax - ymin) / 2)
+      }
+    }
+  }
   
   var body : some View {
     VStack {
       Image(xImage: originalImage).resizable().scaledToFit()
+        .overlay {
+          GeometryReader { g in
+            overlay(g.size)
+          }
+        }
       HStack {
         // Need the photoLibrary to get the itemIdentifier when picked to get the PHAsset for changes
         PhotosPicker("Select avatar", selection: $thePhoto, matching: .images,
@@ -51,6 +92,9 @@ struct ContentView : View {
         
         Button.init(action: {
           print("mustachify")
+          Task {
+            faces = (try? await allFaces(in: CIImage(xImage: originalImage)! )) ?? []
+          }
         }, label: {
           Text("Mustachify")
         })
@@ -80,6 +124,8 @@ struct ContentView : View {
     }
   }
   
+  
+  /*
   var adjustment: MustacheAdjustment?
 
   func addMustaches() {
@@ -135,4 +181,29 @@ struct ContentView : View {
                     self.saving = false
                 })
   }
+   */
+}
+
+
+extension CIImage {
+#if os(macOS)
+  /// Create a CIImage from an NSImage
+public convenience init?(xImage x : XImage ) {
+  if let tiffData = x.tiffRepresentation,
+     let bitmap = NSBitmapImageRep(data:tiffData) {
+    self.init(bitmapImageRep: bitmap)
+  } else {
+    return nil
+  }
+}
+#endif
+
+#if os(iOS)
+  /// Create a ciImage from a UIImage
+  public convenience init?(xImage x : XImage) {
+    self.init(image: x)
+  }
+#endif
+
+
 }

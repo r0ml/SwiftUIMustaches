@@ -11,7 +11,7 @@
 		31A7DB4619CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */; };
 		31A7DB5919CEFC510081C234 /* UIImage+RotatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5719CEFC510081C234 /* UIImage+RotatedImage.swift */; };
-		31A7DB5A19CEFC8B0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; platformFilter = ios; };
+		31A7DB5A19CEFC8B0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; };
 		31E6414D19CAD4C10041421D /* SwiftMustaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6414C19CAD4C10041421D /* SwiftMustaches.swift */; };
 		31E6415419CAD4C10041421D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
 		31E6417619CADC100041421D /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E6417519CADC100041421D /* PhotosUI.framework */; };
@@ -19,9 +19,8 @@
 		31E6417D19CADC100041421D /* PhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6417C19CADC100041421D /* PhotoEditorViewController.swift */; };
 		31E6418219CADC100041421D /* MustachePhotoEditingExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 31E6417319CADC100041421D /* MustachePhotoEditingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		31ED765F19CB1CA7007365DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
-		E7E6E8042ACB1F0600ED9E0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */; };
-		E7E6E8072ACBD5AA00ED9E0D /* MustacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */; };
 		E7E6E8092ACC521000ED9E0D /* AsyncVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */; };
+		E7E6E80A2ACC568300ED9E0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -350,8 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31E6414D19CAD4C10041421D /* SwiftMustaches.swift in Sources */,
-				E7E6E8042ACB1F0600ED9E0D /* ContentView.swift in Sources */,
-				E7E6E8072ACBD5AA00ED9E0D /* MustacheView.swift in Sources */,
+				E7E6E80A2ACC568300ED9E0D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +377,6 @@
 		};
 		E7E6E8022ACB1E6900ED9E0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = 31A7DB3019CEFACA0081C234 /* MustacheAdjustmentFramework */;
 			targetProxy = E7E6E8012ACB1E6900ED9E0D /* PBXContainerItemProxy */;
 		};

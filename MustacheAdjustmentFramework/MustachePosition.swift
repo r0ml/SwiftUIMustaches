@@ -10,6 +10,7 @@
 import CoreGraphics
 import Foundation
 
+#if os(iOS)
 public class MustachePosition: NSObject, NSCoding {
     
     public let rect: CGRect
@@ -31,3 +32,28 @@ public class MustachePosition: NSObject, NSCoding {
     }
     
 }
+#else
+
+public class MustachePosition: NSObject, NSCoding {
+    
+    public let rect: NSRect
+    public let angle: CGFloat
+    
+    public init(rect: CGRect, angle: CGFloat) {
+        self.rect = rect
+        self.angle = angle
+    }
+    
+    public required init(coder aDecoder: NSCoder) {
+      self.rect = aDecoder.decodeRect(forKey: "rect")
+      self.angle = aDecoder.decodeObject(forKey: "angle") as! CGFloat
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+      aCoder.encode(rect, forKey: "rect")
+      aCoder.encode(angle, forKey: "angle")
+    }
+    
+}
+#endif
+
