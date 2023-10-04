@@ -1,14 +1,13 @@
-//
-//  MustachePosition.swift
-//  SwiftMustaches
-//
-//  Created by Dariusz Rybicki on 20/09/14.
-//  Copyright (c) 2014 EL Passion. All rights reserved.
-//
+// Copyright (c) 1868 Charles Babbage
+// Found amongst his effects by r0ml
 
-// import UIKit
 import CoreGraphics
 import Foundation
+
+// This is silly, but iOS NSCoder has a `decodeCGRect` method,
+// whereas macOS NSCoder does not, ahd has a `decodeRect` mthod which operates
+// on NSRect
+// So I need two different versions of this.
 
 #if os(iOS)
 public class MustachePosition: NSObject, NSCoding {

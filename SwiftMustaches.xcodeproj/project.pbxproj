@@ -10,7 +10,6 @@
 		31A7DB4519CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; platformFilter = ios; };
 		31A7DB4619CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */; };
-		31A7DB5919CEFC510081C234 /* UIImage+RotatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5719CEFC510081C234 /* UIImage+RotatedImage.swift */; };
 		31A7DB5A19CEFC8B0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; };
 		31E6414D19CAD4C10041421D /* SwiftMustaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6414C19CAD4C10041421D /* SwiftMustaches.swift */; };
 		31E6415419CAD4C10041421D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
@@ -21,6 +20,7 @@
 		31ED765F19CB1CA7007365DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
 		E7E6E8092ACC521000ED9E0D /* AsyncVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */; };
 		E7E6E80A2ACC568300ED9E0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */; };
+		E7F37FA92ACDB2FB0097FF35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,14 +73,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		310636CB19CF2D0900B04125 /* FaceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
 		31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MustacheAdjustmentFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A7DB3419CEFACA0081C234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MustachePosition.swift; sourceTree = "<group>"; };
 		31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MustacheAdjustment.swift; sourceTree = "<group>"; };
-		31A7DB5619CEFC510081C234 /* UIImage+ImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageOrientation.swift"; sourceTree = "<group>"; };
-		31A7DB5719CEFC510081C234 /* UIImage+RotatedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RotatedImage.swift"; sourceTree = "<group>"; };
-		31AE5EB019CB7E9400364087 /* PhotoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEditorViewController.swift; sourceTree = "<group>"; };
 		31E6414719CAD4C10041421D /* SwiftMustaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMustaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E6414B19CAD4C10041421D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31E6414C19CAD4C10041421D /* SwiftMustaches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMustaches.swift; sourceTree = "<group>"; };
@@ -95,6 +91,7 @@
 		E7E6E8052ACBB5E200ED9E0D /* SwiftMustaches.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftMustaches.entitlements; sourceTree = "<group>"; };
 		E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheView.swift; sourceTree = "<group>"; };
 		E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncVision.swift; sourceTree = "<group>"; };
+		E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,13 +126,11 @@
 		31A7DB3219CEFACA0081C234 /* MustacheAdjustmentFramework */ = {
 			isa = PBXGroup;
 			children = (
-				31A7DB5619CEFC510081C234 /* UIImage+ImageOrientation.swift */,
-				31A7DB5719CEFC510081C234 /* UIImage+RotatedImage.swift */,
-				310636CB19CF2D0900B04125 /* FaceDetector.swift */,
 				31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */,
 				31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */,
 				31A7DB3419CEFACA0081C234 /* Info.plist */,
 				E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */,
+				E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */,
 			);
 			path = MustacheAdjustmentFramework;
 			sourceTree = "<group>";
@@ -170,7 +165,6 @@
 				E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */,
 				E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */,
 				31E6415319CAD4C10041421D /* Images.xcassets */,
-				31AE5EB019CB7E9400364087 /* PhotoEditorViewController.swift */,
 			);
 			path = SwiftMustaches;
 			sourceTree = "<group>";
@@ -340,7 +334,7 @@
 			files = (
 				E7E6E8092ACC521000ED9E0D /* AsyncVision.swift in Sources */,
 				31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */,
-				31A7DB5919CEFC510081C234 /* UIImage+RotatedImage.swift in Sources */,
+				E7F37FA92ACDB2FB0097FF35 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

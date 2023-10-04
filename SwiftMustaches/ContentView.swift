@@ -6,24 +6,6 @@ import PhotosUI
 import MustacheAdjustmentFramework
 import Vision
 
-/*
-#if os(macOS)
-public typealias XImage = NSImage
-extension Image {
-  init(xImage: XImage) {
-    self.init(nsImage: xImage)
-  }
-}
-#else
-public typealias XImage = UIImage
-extension Image {
-  init(xImage: XImage) {
-    self.init(uiImage: xImage)
-  }
-}
-#endif
-*/
-
 struct ContentView : View {
   @State var originalImage : XImage = XImage()
   @State var thePhoto : PhotosPickerItem?
@@ -45,11 +27,11 @@ struct ContentView : View {
          let xmin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.x < $1.x})?.x,
          let xmax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.x < $1.x})?.x,
 
-        let ymin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.y < $1.y})?.y,
+ //       let ymin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.y < $1.y})?.y,
         let ymax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.y < $1.y})?.y,
-         let roll = z.roll?.doubleValue,
-         let yaw = z.yaw?.doubleValue {
-        //  let pitch = z.pitch?.doubleValue {
+         let roll = z.roll?.doubleValue {
+//         let yaw = z.yaw?.doubleValue {
+//         let pitch = z.pitch?.doubleValue {
 
         // let mh = (xmax - xmin) * (mustacheImage.size.y / mustacheImage.size.x)
         Image(xImage: mustacheImage).resizable().scaledToFit()
@@ -78,16 +60,6 @@ struct ContentView : View {
                      photoLibrary: PHPhotoLibrary.shared() )
           // .photosPickerStyle(.inline)
           
-/*
-        
-        Button.init(action: {
-          print("do the open")
-          pevc.openPhoto()
-          
-        }, label: {
-          Text("Open")
-        })
- */
         Spacer()
         
         Button.init(action: {
@@ -184,26 +156,3 @@ struct ContentView : View {
    */
 }
 
-
-extension CIImage {
-#if os(macOS)
-  /// Create a CIImage from an NSImage
-public convenience init?(xImage x : XImage ) {
-  if let tiffData = x.tiffRepresentation,
-     let bitmap = NSBitmapImageRep(data:tiffData) {
-    self.init(bitmapImageRep: bitmap)
-  } else {
-    return nil
-  }
-}
-#endif
-
-#if os(iOS)
-  /// Create a ciImage from a UIImage
-  public convenience init?(xImage x : XImage) {
-    self.init(image: x)
-  }
-#endif
-
-
-}

@@ -4,6 +4,10 @@
 import SwiftUI
 import MustacheAdjustmentFramework
 
+
+// FIXME: instead of using Vision framework, this file / function implements the face identification by
+// using a core image filter.
+
 // display an image with mustaches
 
 #if os(macOS)

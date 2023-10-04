@@ -9,7 +9,6 @@ struct SwiftMustaches: App {
     var body: some Scene {
         WindowGroup {
           ContentView()
-//            .environmentObject( StoreManager() )
         }
     }
 }
