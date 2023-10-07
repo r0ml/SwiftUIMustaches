@@ -44,3 +44,5 @@ extension CIImage {
   }
 }
 #endif
+
+extension XImage : @unchecked Sendable {}

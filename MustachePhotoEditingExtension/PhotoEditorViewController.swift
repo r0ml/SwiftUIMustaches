@@ -12,18 +12,22 @@ let log = Logger()
 import AppKit
 
 final class MyHostingController<Content : View> : NSHostingController<Content>, PHContentEditingController {
-  var input: PHContentEditingInput?
+  var shouldShowCancelConfirmation: Bool = false
+  
+//  var input: PHContentEditingInput?
   var adjustment: MustacheAdjustment?
   var adjustmentAlreadySet: Bool = false
   
   // var backgroundImageView: UIImageView!
   // var photoImageView: Image
 
+  /*
   var image: XImage? {
       didSet {
         self.rootView.image = image
       }
   }
+   */
 
   @MainActor override required dynamic init?(coder: NSCoder, rootView: Content) {
     super.init(coder: coder, rootView: rootView)
@@ -39,12 +43,7 @@ final class MyHostingController<Content : View> : NSHostingController<Content>, 
 
   
   func startContentEditing(with contentEditingInput: PHContentEditingInput, placeholderImage: XImage) {
-        self.input = contentEditingInput
-        
-        if self.input == nil {
-            return
-        }
-        let input = self.input!
+        let input = contentEditingInput
         
       if input.mediaType != .image {
             presentErrorAlertView(message: "Mustaches can only be added to images")
@@ -69,13 +68,15 @@ final class MyHostingController<Content : View> : NSHostingController<Content>, 
             NSLog("Loaded asset WITH adjustment data")
         }
         
-        if let adjustment = adjustment {
+    /*
+        if let adjustment {
           image = adjustment.applyAdjustment(inputImage: fullSizeImage!)
         }
         else {
             presentErrorAlertView(message: "Unable to add mustaches")
             image = fullSizeImage
         }
+     */
     }
 
 //  func finishContentEditing(completionHandler: @escaping (PHContentEditingOutput?) -> Void) {
@@ -84,14 +85,15 @@ final class MyHostingController<Content : View> : NSHostingController<Content>, 
   
   func finishContentEditing(completionHandler: @escaping ((PHContentEditingOutput?) -> Void)) {
     Task.detached {
-      let isInputSet = await (self.input != nil)
+ //     let isInputSet = await (self.input != nil)
       let isAdjustmentSet = await (self.adjustment != nil)
       let isMustachePositionSet = await ((self.adjustment?.mustachePositions.count)! > 0)
       let wasAdjustmentAlreadySet = await self.adjustmentAlreadySet
             
+/*
       let output = await PHContentEditingOutput(contentEditingInput: self.input!)
 
-            if !isInputSet || !isAdjustmentSet || !isMustachePositionSet || wasAdjustmentAlreadySet {
+            if !isAdjustmentSet || !isMustachePositionSet || wasAdjustmentAlreadySet {
                 NSLog("Nothing changed")
               completionHandler(output)
                 return
@@ -114,14 +116,12 @@ final class MyHostingController<Content : View> : NSHostingController<Content>, 
             catch {
                 fatalError()
             }
+ */
         }
+ 
     }
 
-  func cancelContentEditing() {
-    <#code#>
-  }
-  
-  var shouldShowCancelConfirmation: Bool
+  func cancelContentEditing() {}
   
   @MainActor private func presentErrorAlertView(message: String) -> Void {
     log.error("\(message)")

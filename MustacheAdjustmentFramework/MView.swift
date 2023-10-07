@@ -5,12 +5,27 @@ import SwiftUI
 import PhotosUI
 import Vision
 
+
 public struct MView : View {
   var originalImage : XImage
 
   let mustacheImage: XImage = XImage(named: "mustache")!
 
   var faces : [VNFaceObservation]
+
+  
+  @MainActor static public func create(image : XImage) -> MView {
+    var ff : [VNFaceObservation] = []
+    let semaphore = DispatchSemaphore(value: 0)
+    
+    Task {
+      ff = (try? await allFaces(in: CIImage(xImage: image)! )) ?? []
+      semaphore.signal()
+    }
+    
+    semaphore.wait()
+    return Self.init(originalImage: image, faces: ff)
+  }
   
 //  let pevc = PhotoEditorViewController()
   

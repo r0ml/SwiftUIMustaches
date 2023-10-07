@@ -3,6 +3,7 @@
 
 import CoreGraphics
 import Foundation
+import SwiftUI
 
 // This is silly, but iOS NSCoder has a `decodeCGRect` method,
 // whereas macOS NSCoder does not, ahd has a `decodeRect` mthod which operates
@@ -36,21 +37,21 @@ public class MustachePosition: NSObject, NSCoding {
 public class MustachePosition: NSObject, NSCoding {
     
     public let rect: NSRect
-    public let angle: CGFloat
+    public let angle: Angle
     
-    public init(rect: CGRect, angle: CGFloat) {
+    public init(rect: CGRect, angle: Angle) {
         self.rect = rect
         self.angle = angle
     }
     
     public required init(coder aDecoder: NSCoder) {
       self.rect = aDecoder.decodeRect(forKey: "rect")
-      self.angle = aDecoder.decodeObject(forKey: "angle") as! CGFloat
+      self.angle = Angle(radians: aDecoder.decodeDouble(forKey: "angle") )
     }
     
     public func encode(with aCoder: NSCoder) {
       aCoder.encode(rect, forKey: "rect")
-      aCoder.encode(angle, forKey: "angle")
+      aCoder.encode(angle.radians, forKey: "angle")
     }
     
 }

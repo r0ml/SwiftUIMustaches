@@ -1,16 +1,11 @@
-//
-//  MustacheAdjustment.swift
-//  SwiftMustaches
-//
-//  Created by Dariusz Rybicki on 19/09/14.
-//  Copyright (c) 2014 EL Passion. All rights reserved.
-//
+// Copyright (c) 1868 Charles Babbage
+// Found amongst his effects by r0ml
 
 import Foundation
 import Photos
 // import UIKit
 import SwiftUI
-
+import Vision
 
 
 // Switch to using Vision framework for face detection
@@ -24,7 +19,7 @@ let MustacheAdjustmentDataFormatVersion = "1.0"
 
 public class MustacheAdjustment {
     
-    public let mustacheImage: XImage = XImage(named: "mustache")!
+    public static let mustacheImage: XImage = XImage(named: "mustache")!
     public let mustachePositions: [MustachePosition]
     
     // MARK: - Initialization
@@ -42,10 +37,20 @@ public class MustacheAdjustment {
         }
     }
     
-    public init?(image: XImage) {
-        var mustachePositions: [MustachePosition] = []
-        
-        for faceFeature in FaceDetector.detectFaces(inImage: image) {
+    @MainActor public init?(image: XImage)  {
+      var mustachePositions: [MustachePosition] = []
+      var faces : [VNFaceObservation] = []
+      
+      var semaphore = DispatchSemaphore(value:0)
+      Task {
+        faces = try! await allFaces(in: CIImage(xImage: image)!)
+        semaphore.signal()
+      }
+      
+      semaphore.wait()
+      
+//        for faceFeature in FaceDetector.detectFaces(inImage: image) {
+      for faceFeature in faces {
             if let mustachePosition = MustacheAdjustment.mustachePosition(imageSize: image.size, faceFeature: faceFeature) {
                 mustachePositions.append(mustachePosition)
                 NSLog("Mustache position found")
@@ -73,14 +78,14 @@ public class MustacheAdjustment {
             data: data)
     }
     
-  /*
+
     @MainActor public func applyAdjustment(inputImage: XImage) -> XImage {
       
-      let z = ImageRenderer(content: Image(xImage: inputImage))
+      let v = MView.create(image: inputImage)
+      let z = ImageRenderer(content: v)
       z.scale = 2
-      let k = z.xImage
       
-      
+/*
         UIGraphicsBeginImageContextWithOptions(inputImage.size, true, inputImage.scale)
         _ = UIGraphicsGetCurrentContext()
       inputImage.draw(at: CGPointZero)
@@ -94,8 +99,10 @@ public class MustacheAdjustment {
         let outputImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
       return outputImage!
+ */
+      return z.nsImage!
     }
-    */
+  
   
     // MARK: - Helper methods
     
@@ -107,29 +114,50 @@ public class MustacheAdjustment {
         return false
     }
     
-  private class func mustachePosition(imageSize: CGSize, faceFeature: CIFaceFeature) -> MustachePosition? {
-        if !faceFeature.hasMouthPosition { return nil }
-        
-        let mustacheSize = CGSize(
-            width: faceFeature.bounds.width / 1.5,
-            height: faceFeature.bounds.height / 5)
-        
-        let mustacheRect = CGRect(
-            x: faceFeature.mouthPosition.x - (mustacheSize.width / 2),
-            y: imageSize.height - faceFeature.mouthPosition.y - mustacheSize.height,
-            width: mustacheSize.width,
-            height: mustacheSize.height)
-        
-        var mustacheAngle: CGFloat
-        if faceFeature.hasFaceAngle {
-            mustacheAngle = CGFloat(faceFeature.faceAngle) * CGFloat(3.14) / CGFloat(180.0)
-        }
-        else {
-            mustacheAngle = CGFloat(0)
-            NSLog("Mustache angle not found, using \(mustacheAngle)")
-        }
-        
-        return MustachePosition(rect: mustacheRect, angle: mustacheAngle)
+  class func zz(_ xmin : CGFloat, _ xmax: CGFloat ) -> CGFloat {
+    let ar : CGFloat = CGFloat(mustacheImage.size.height) / CGFloat(mustacheImage.size.width)
+    return ( ( (xmax - xmin) *  ar ) / 2)
+  }
+  
+  private class func mustachePosition(imageSize: CGSize, faceFeature z: VNFaceObservation) -> MustachePosition? {
+    
+    if let kk = z.landmarks?.outerLips,
+       let xmin : CGFloat = kk.pointsInImage(imageSize: imageSize).min(by: {$0.x < $1.x})?.x,
+       let xmax : CGFloat = kk.pointsInImage(imageSize: imageSize).max(by: {$0.x < $1.x})?.x,
+       
+        //          let ymin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.y < $1.y})?.y,
+       let ymax : CGFloat = kk.pointsInImage(imageSize: imageSize).max(by: {$0.y < $1.y})?.y,
+       let roll = z.roll?.doubleValue {
+      //         let yaw = z.yaw?.doubleValue {
+      //         let pitch = z.pitch?.doubleValue {
+      
+      // let mh = (xmax - xmin) * (mustacheImage.size.y / mustacheImage.size.x)
+      //        Image(xImage: mustacheImage).resizable().scaledToFit()
+      //          .frame(width: (xmax - xmin)   /* , height: ymax - ymin */ )
+      //          .rotationEffect( Angle(radians: -roll), anchor: .center )
+      // FIXME: if the position is modified after the rotation, the position offsets need to be adjusted for the
+      // rotation
+      // the adjustment is the cos of the
+      //          .position(x: (xmin+xmax) /  2 , // * (1 - CGFloat(cos(-roll))),
+      //                    y: g.height - ymax - zz(xmin, xmax) ) // - (ymax - ymin) / 2)
+      
+      
+      
+      let mustacheSize = CGSize(
+        width: (xmax-xmin) / 1.5,
+        height: (xmax - xmin) * imageSize.height / imageSize.width) //      faceFeature.bounds.height / 5)
+      
+      let mustacheRect = CGRect(
+        x: (xmin + xmax) / 2, // faceFeature.mouthPosition.x - (mustacheSize.width / 2),
+        y: imageSize.height - ymax - zz(xmin, xmax), //  faceFeature.mouthPosition.y - mustacheSize.height,
+        width: mustacheSize.width,
+        height: mustacheSize.height)
+      
+      let mustacheAngle = Angle(radians: -roll)
+      
+      return MustachePosition(rect: mustacheRect, angle: mustacheAngle)
     }
+    return nil
+  }
     
 }
