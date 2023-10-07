@@ -3,51 +3,69 @@
 
 import SwiftUI
 import PhotosUI
-import MustacheAdjustmentFramework
 import Vision
 
-struct ContentView : View {
-  @State var originalImage : XImage = XImage()
-  @State var thePhoto : PhotosPickerItem?
-  
+public struct MView : View {
+  var originalImage : XImage
+
   let mustacheImage: XImage = XImage(named: "mustache")!
 
-  @State var faces : [VNFaceObservation] = []
+  var faces : [VNFaceObservation]
   
 //  let pevc = PhotoEditorViewController()
   
-  var body : some View {
+  public init(originalImage o: XImage, faces f : [VNFaceObservation]) {
+    originalImage = o
+    faces = f
+  }
+  
+  func zz(_ xmin : CGFloat, _ xmax: CGFloat ) -> CGFloat {
+    let ar : CGFloat = CGFloat(mustacheImage.size.height) / CGFloat(mustacheImage.size.width)
+    return ( ( (xmax - xmin) *  ar ) / 2)
+  }
+  
+  func overlay(_ g : CGSize) -> some View {
+    ForEach(faces, id: \.self) { z in
+      if let kk = z.landmarks?.outerLips,
+         let xmin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.x < $1.x})?.x,
+         let xmax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.x < $1.x})?.x,
+
+ //       let ymin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.y < $1.y})?.y,
+        let ymax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.y < $1.y})?.y,
+         let roll = z.roll?.doubleValue {
+//         let yaw = z.yaw?.doubleValue {
+//         let pitch = z.pitch?.doubleValue {
+
+        // let mh = (xmax - xmin) * (mustacheImage.size.y / mustacheImage.size.x)
+        Image(xImage: mustacheImage).resizable().scaledToFit()
+          .frame(width: (xmax - xmin)   /* , height: ymax - ymin */ )
+          .rotationEffect( Angle(radians: -roll), anchor: .center )
+        // FIXME: if the position is modified after the rotation, the position offsets need to be adjusted for the
+        // rotation
+        // the adjustment is the cos of the
+          .position(x: (xmin+xmax) /  2 , // * (1 - CGFloat(cos(-roll))),
+                    y: g.height - ymax - zz(xmin, xmax) ) // - (ymax - ymin) / 2)
+      }
+    }
+  }
+  
+  public var body : some View {
     VStack {
-      MView(originalImage: originalImage, faces: faces)
-      HStack {
-        // Need the photoLibrary to get the itemIdentifier when picked to get the PHAsset for changes
-        PhotosPicker("Select avatar", selection: $thePhoto, matching: .images,
-                     photoLibrary: PHPhotoLibrary.shared() )
-          // .photosPickerStyle(.inline)
-          
-        Spacer()
-        
-        Button.init(action: {
-          print("mustachify")
-          Task {
-            faces = (try? await allFaces(in: CIImage(xImage: originalImage)! )) ?? []
+      Image(xImage: originalImage).resizable().scaledToFit()
+        .overlay {
+          GeometryReader { g in
+            overlay(g.size)
           }
-        }, label: {
-          Text("Mustachify")
-        })
-        Button.init(action: {
-          print("shave")
-        }, label: {
-          Text("Shave")
-        })
-
-
-      }.onChange(of: thePhoto) {
+        }
+    
+      /*
+       .onChange(of: thePhoto) {
 //        print(thePhoto?.itemIdentifier)
         Task {
           if let data = try! await thePhoto?.loadTransferable(type: Data.self) {
             if let xImage = XImage(data: data) {
               originalImage = xImage
+              faces = (try? await allFaces(in: CIImage(xImage: originalImage)! )) ?? []
               return
             } else {
               print("Why did I fail?")
@@ -57,6 +75,7 @@ struct ContentView : View {
           }
         }
       }
+      */
     
     }
   }

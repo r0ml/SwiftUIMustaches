@@ -18,9 +18,12 @@
 		31E6417D19CADC100041421D /* PhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6417C19CADC100041421D /* PhotoEditorViewController.swift */; };
 		31E6418219CADC100041421D /* MustachePhotoEditingExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 31E6417319CADC100041421D /* MustachePhotoEditingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		31ED765F19CB1CA7007365DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
+		E7DFB33E2AD0B005009FB6D9 /* MustacheAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */; };
 		E7E6E8092ACC521000ED9E0D /* AsyncVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */; };
 		E7E6E80A2ACC568300ED9E0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */; };
 		E7F37FA92ACDB2FB0097FF35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */; };
+		E7F37FAD2ACE5B230097FF35 /* MView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F37FAB2ACE58980097FF35 /* MView.swift */; };
+		E7F37FAF2ACEE58B0097FF35 /* MacOSPhotoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F37FAE2ACEE58B0097FF35 /* MacOSPhotoStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,8 @@
 		E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheView.swift; sourceTree = "<group>"; };
 		E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncVision.swift; sourceTree = "<group>"; };
 		E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E7F37FAB2ACE58980097FF35 /* MView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MView.swift; sourceTree = "<group>"; };
+		E7F37FAE2ACEE58B0097FF35 /* MacOSPhotoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MacOSPhotoStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,8 @@
 			children = (
 				31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */,
 				31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */,
+				E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */,
+				E7F37FAB2ACE58980097FF35 /* MView.swift */,
 				31A7DB3419CEFACA0081C234 /* Info.plist */,
 				E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */,
 				E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */,
@@ -163,7 +170,6 @@
 				31E6414B19CAD4C10041421D /* Info.plist */,
 				31E6414C19CAD4C10041421D /* SwiftMustaches.swift */,
 				E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */,
-				E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */,
 				31E6415319CAD4C10041421D /* Images.xcassets */,
 			);
 			path = SwiftMustaches;
@@ -184,6 +190,7 @@
 				31E6417B19CADC100041421D /* Info.plist */,
 				31E6417C19CADC100041421D /* PhotoEditorViewController.swift */,
 				31E6417E19CADC100041421D /* PhotoEditor.storyboard */,
+				E7F37FAE2ACEE58B0097FF35 /* MacOSPhotoStoryboard.storyboard */,
 			);
 			path = MustachePhotoEditingExtension;
 			sourceTree = "<group>";
@@ -321,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F37FAF2ACEE58B0097FF35 /* MacOSPhotoStoryboard.storyboard in Resources */,
 				31ED765F19CB1CA7007365DC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +342,8 @@
 			files = (
 				E7E6E8092ACC521000ED9E0D /* AsyncVision.swift in Sources */,
 				31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */,
+				E7F37FAD2ACE5B230097FF35 /* MView.swift in Sources */,
+				E7DFB33E2AD0B005009FB6D9 /* MustacheAdjustment.swift in Sources */,
 				E7F37FA92ACDB2FB0097FF35 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

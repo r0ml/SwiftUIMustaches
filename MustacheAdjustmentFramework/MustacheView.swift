@@ -20,8 +20,6 @@ extension ImageRenderer {
 }
 #endif
 
-let MustacheAdjustmentDataFormatIdentifier = "software.tinker.SwiftMustaches.MustacheAdjustment"
-let MustacheAdjustmentDataFormatVersion = "1.0"
 
 
 public func computeMustachePosition(_ faceFeature : CIFaceFeature, size imageSize: CGSize) -> MustachePosition? {

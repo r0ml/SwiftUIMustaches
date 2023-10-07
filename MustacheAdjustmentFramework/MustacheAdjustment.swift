@@ -18,6 +18,8 @@ import SwiftUI
 // Use the mustache placement info to draw mustaches on the image.  That gets down in ContentView?
 
 
+let MustacheAdjustmentDataFormatIdentifier = "software.tinker.SwiftMustaches.MustacheAdjustment"
+let MustacheAdjustmentDataFormatVersion = "1.0"
 
 
 public class MustacheAdjustment {
@@ -71,6 +73,7 @@ public class MustacheAdjustment {
             data: data)
     }
     
+  /*
     @MainActor public func applyAdjustment(inputImage: XImage) -> XImage {
       
       let z = ImageRenderer(content: Image(xImage: inputImage))
@@ -92,7 +95,8 @@ public class MustacheAdjustment {
         UIGraphicsEndImageContext()
       return outputImage!
     }
-    
+    */
+  
     // MARK: - Helper methods
     
     public class func canHandleAdjustmentData(adjustmentData: PHAdjustmentData?) -> Bool {
