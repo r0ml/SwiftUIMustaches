@@ -11,10 +11,12 @@ let log = Logger()
 #if os(macOS)
 import AppKit
 
-final class MyHostingController<Content : View> : NSHostingController<Content>, PHContentEditingController {
+//final class MyHostingController<Content : View> : NSHostingController<Content>, PHContentEditingController {
+class MyHostingController : NSViewController, PHContentEditingController {
+  var input: PHContentEditingInput?
+
   var shouldShowCancelConfirmation: Bool = false
   
-//  var input: PHContentEditingInput?
   var adjustment: MustacheAdjustment?
   var adjustmentAlreadySet: Bool = false
   
@@ -29,12 +31,28 @@ final class MyHostingController<Content : View> : NSHostingController<Content>, 
   }
    */
 
+  /*
   @MainActor override required dynamic init?(coder: NSCoder, rootView: Content) {
     super.init(coder: coder, rootView: rootView)
   }
   
   @MainActor required dynamic init?(coder: NSCoder) {
     super.init(coder: coder)
+  }
+  */
+  
+  /*
+  init() {
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init(coder: NSCoder) {
+    fatalError("no coder")
+  }
+  */
+  
+  override func viewDidLoad() {
+    print("my view loaded")
   }
   
   func canHandle(_ adjustmentData: PHAdjustmentData) -> Bool {
@@ -43,17 +61,18 @@ final class MyHostingController<Content : View> : NSHostingController<Content>, 
 
   
   func startContentEditing(with contentEditingInput: PHContentEditingInput, placeholderImage: XImage) {
-        let input = contentEditingInput
+    print("start content editing")
+      input = contentEditingInput
         
-      if input.mediaType != .image {
+      if input!.mediaType != .image {
             presentErrorAlertView(message: "Mustaches can only be added to images")
             return
         }
         
-        let fullSizeImageUrl = input.fullSizeImageURL!
+        let fullSizeImageUrl = input!.fullSizeImageURL!
       let fullSizeImage = XImage(contentsOfFile: fullSizeImageUrl.path)
         
-    let ad = input.adjustmentData
+    let ad = input!.adjustmentData
     if ad == nil {
     } else {
       adjustment = MustacheAdjustment(adjustmentData: ad!)
