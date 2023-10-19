@@ -85,10 +85,8 @@
 		31E6415319CAD4C10041421D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		31E6417519CADC100041421D /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		31E6417719CADC100041421D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		31E6417C19CADC100041421D /* PhotoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PhotoEditorViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E7E6D9D32AD257160035A290 /* MustacheExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MustacheExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E6D9D72AD257160035A290 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
-		E7E6D9DA2AD257160035A290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PhotoEditingViewController.xib; sourceTree = "<group>"; };
 		E7E6D9DC2AD257160035A290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7E6D9DD2AD257160035A290 /* MustacheExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MustacheExtension.entitlements; sourceTree = "<group>"; };
 		E7E6D9E92AD30A620035A290 /* MMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMView.swift; sourceTree = "<group>"; };
@@ -188,9 +186,7 @@
 		E7E6D9D62AD257160035A290 /* MustacheExtension */ = {
 			isa = PBXGroup;
 			children = (
-				31E6417C19CADC100041421D /* PhotoEditorViewController.swift */,
 				E7E6D9D72AD257160035A290 /* PhotoEditingViewController.swift */,
-				E7E6D9D92AD257160035A290 /* PhotoEditingViewController.xib */,
 				E7E6D9DC2AD257160035A290 /* Info.plist */,
 				E7E6D9DD2AD257160035A290 /* MustacheExtension.entitlements */,
 			);
@@ -386,17 +382,6 @@
 			targetProxy = E7E6D9EB2AD30C4B0035A290 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E7E6D9D92AD257160035A290 /* PhotoEditingViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7E6D9DA2AD257160035A290 /* Base */,
-			);
-			name = PhotoEditingViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		31A7DB4919CEFACA0081C234 /* Debug */ = {

@@ -54,7 +54,7 @@ class PhotoEditingViewController: NSViewController, PHContentEditingController {
 //      let rvv = NSHostingView(rootView: rv.position(x: 1000, y: 10))
 //      rvv.setFrameSize(CGSize(width: 2400, height: 200))
   
-      let semaphore = DispatchSemaphore(value: 0)
+//      let semaphore = DispatchSemaphore(value: 0)
       print("twelve")
       print("one")
       let fullSizeImageUrl = self.input!.fullSizeImageURL!
