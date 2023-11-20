@@ -4,7 +4,7 @@
 import SwiftUI
 
 @main
-struct SwiftMustaches: App {
+struct SwiftUIMustaches: App {
 
     var body: some Scene {
         WindowGroup {

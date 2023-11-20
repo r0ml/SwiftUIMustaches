@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "31E6417219CADC100041421D"
-               BuildableName = "MustachePhotoEditingExtension.appex"
-               BlueprintName = "MustachePhotoEditingExtension"
-               ReferencedContainer = "container:SwiftMustaches.xcodeproj">
+               BlueprintIdentifier = "E7E6D9D22AD257160035A290"
+               BuildableName = "MustacheExtension.appex"
+               BlueprintName = "MustacheExtension"
+               ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "31E6414619CAD4C10041421D"
-               BuildableName = "SwiftMustaches.app"
-               BlueprintName = "SwiftMustaches"
-               ReferencedContainer = "container:SwiftMustaches.xcodeproj">
+               BuildableName = "SwiftUIMustaches.app"
+               BlueprintName = "SwiftUIMustaches"
+               ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -41,18 +41,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31E6417219CADC100041421D"
-            BuildableName = "MustachePhotoEditingExtension.appex"
-            BlueprintName = "MustachePhotoEditingExtension"
-            ReferencedContainer = "container:SwiftMustaches.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <Testables>
-      </Testables>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -66,19 +56,20 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
+      <RemoteRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.Photos"
+         RemotePath = "/System/Applications/Photos.app">
+      </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "31E6414619CAD4C10041421D"
-            BuildableName = "SwiftMustaches.app"
-            BlueprintName = "SwiftMustaches"
-            ReferencedContainer = "container:SwiftMustaches.xcodeproj">
+            BuildableName = "SwiftUIMustaches.app"
+            BlueprintName = "SwiftUIMustaches"
+            ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <LocationScenarioReference
-         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
-         referenceType = "1">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -93,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "31E6414619CAD4C10041421D"
-            BuildableName = "SwiftMustaches.app"
-            BlueprintName = "SwiftMustaches"
-            ReferencedContainer = "container:SwiftMustaches.xcodeproj">
+            BuildableName = "SwiftUIMustaches.app"
+            BlueprintName = "SwiftUIMustaches"
+            ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

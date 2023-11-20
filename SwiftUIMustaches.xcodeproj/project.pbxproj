@@ -7,45 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31A7DB4519CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; };
-		31A7DB4619CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */; };
-		31E6414D19CAD4C10041421D /* SwiftMustaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6414C19CAD4C10041421D /* SwiftMustaches.swift */; };
+		31E6414D19CAD4C10041421D /* SwiftUIMustaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6414C19CAD4C10041421D /* SwiftUIMustaches.swift */; };
 		31E6415419CAD4C10041421D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
-		E7DFB33E2AD0B005009FB6D9 /* MustacheAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */; };
+		E7CFA4162B0B96DD002E6AAD /* MustachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6D9E92AD30A620035A290 /* MustachView.swift */; };
+		E7CFA4172B0B96E9002E6AAD /* AsyncVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */; };
+		E7CFA41C2B0B9971002E6AAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */; };
 		E7E6D9D42AD257160035A290 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E6417519CADC100041421D /* PhotosUI.framework */; };
 		E7E6D9D52AD257160035A290 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E6417719CADC100041421D /* Photos.framework */; };
 		E7E6D9D82AD257160035A290 /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6D9D72AD257160035A290 /* PhotoEditingViewController.swift */; };
 		E7E6D9E72AD25A290035A290 /* MustacheExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7E6D9D32AD257160035A290 /* MustacheExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E7E6D9EA2AD30A620035A290 /* MMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6D9E92AD30A620035A290 /* MMView.swift */; };
 		E7E6D9ED2AD30DB80035A290 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
-		E7E6E8092ACC521000ED9E0D /* AsyncVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */; };
 		E7E6E80A2ACC568300ED9E0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */; };
-		E7F37FA92ACDB2FB0097FF35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */; };
-		E7F37FAD2ACE5B230097FF35 /* MView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F37FAB2ACE58980097FF35 /* MView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		31A7DB4319CEFACA0081C234 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 31E6413F19CAD4C10041421D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 31A7DB3019CEFACA0081C234;
-			remoteInfo = MustacheAdjustment;
-		};
 		E7E6D9E52AD25A180035A290 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 31E6413F19CAD4C10041421D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E7E6D9D22AD257160035A290;
 			remoteInfo = xxx;
-		};
-		E7E6D9EB2AD30C4B0035A290 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 31E6413F19CAD4C10041421D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 31A7DB3019CEFACA0081C234;
-			remoteInfo = MustacheAdjustmentFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,7 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				31A7DB4619CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,13 +55,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MustacheAdjustmentFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31A7DB3419CEFACA0081C234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MustachePosition.swift; sourceTree = "<group>"; };
-		31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MustacheAdjustment.swift; sourceTree = "<group>"; };
-		31E6414719CAD4C10041421D /* SwiftMustaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMustaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31E6414719CAD4C10041421D /* SwiftUIMustaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMustaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E6414B19CAD4C10041421D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31E6414C19CAD4C10041421D /* SwiftMustaches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMustaches.swift; sourceTree = "<group>"; };
+		31E6414C19CAD4C10041421D /* SwiftUIMustaches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMustaches.swift; sourceTree = "<group>"; };
 		31E6415319CAD4C10041421D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		31E6417519CADC100041421D /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		31E6417719CADC100041421D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -89,28 +65,18 @@
 		E7E6D9D72AD257160035A290 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		E7E6D9DC2AD257160035A290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7E6D9DD2AD257160035A290 /* MustacheExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MustacheExtension.entitlements; sourceTree = "<group>"; };
-		E7E6D9E92AD30A620035A290 /* MMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMView.swift; sourceTree = "<group>"; };
+		E7E6D9E92AD30A620035A290 /* MustachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustachView.swift; sourceTree = "<group>"; };
 		E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E7E6E8052ACBB5E200ED9E0D /* SwiftMustaches.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftMustaches.entitlements; sourceTree = "<group>"; };
-		E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheView.swift; sourceTree = "<group>"; };
+		E7E6E8052ACBB5E200ED9E0D /* SwiftUIMustaches.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIMustaches.entitlements; sourceTree = "<group>"; };
 		E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncVision.swift; sourceTree = "<group>"; };
 		E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		E7F37FAB2ACE58980097FF35 /* MView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		31A7DB2D19CEFACA0081C234 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		31E6414419CAD4C10041421D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31A7DB4519CEFACA0081C234 /* MustacheAdjustmentFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,26 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31A7DB3219CEFACA0081C234 /* MustacheAdjustmentFramework */ = {
+		31A7DB3219CEFACA0081C234 /* MustachePlacement */ = {
 			isa = PBXGroup;
 			children = (
-				31A7DB5119CEFB8F0081C234 /* MustachePosition.swift */,
-				31A7DB5319CEFB980081C234 /* MustacheAdjustment.swift */,
-				E7E6E8062ACBD5AA00ED9E0D /* MustacheView.swift */,
-				E7F37FAB2ACE58980097FF35 /* MView.swift */,
-				E7E6D9E92AD30A620035A290 /* MMView.swift */,
-				31A7DB3419CEFACA0081C234 /* Info.plist */,
+				E7E6D9E92AD30A620035A290 /* MustachView.swift */,
 				E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */,
 				E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */,
 			);
-			path = MustacheAdjustmentFramework;
+			path = MustachePlacement;
 			sourceTree = "<group>";
 		};
 		31E6413E19CAD4C10041421D = {
 			isa = PBXGroup;
 			children = (
-				31A7DB3219CEFACA0081C234 /* MustacheAdjustmentFramework */,
-				31E6414919CAD4C10041421D /* SwiftMustaches */,
+				31A7DB3219CEFACA0081C234 /* MustachePlacement */,
+				31E6414919CAD4C10041421D /* SwiftUIMustaches */,
 				E7E6D9D62AD257160035A290 /* MustacheExtension */,
 				31E6417419CADC100041421D /* Frameworks */,
 				31E6414819CAD4C10041421D /* Products */,
@@ -155,23 +116,22 @@
 		31E6414819CAD4C10041421D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				31E6414719CAD4C10041421D /* SwiftMustaches.app */,
-				31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */,
+				31E6414719CAD4C10041421D /* SwiftUIMustaches.app */,
 				E7E6D9D32AD257160035A290 /* MustacheExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		31E6414919CAD4C10041421D /* SwiftMustaches */ = {
+		31E6414919CAD4C10041421D /* SwiftUIMustaches */ = {
 			isa = PBXGroup;
 			children = (
-				E7E6E8052ACBB5E200ED9E0D /* SwiftMustaches.entitlements */,
+				E7E6E8052ACBB5E200ED9E0D /* SwiftUIMustaches.entitlements */,
 				31E6414B19CAD4C10041421D /* Info.plist */,
-				31E6414C19CAD4C10041421D /* SwiftMustaches.swift */,
+				31E6414C19CAD4C10041421D /* SwiftUIMustaches.swift */,
 				E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */,
 				31E6415319CAD4C10041421D /* Images.xcassets */,
 			);
-			path = SwiftMustaches;
+			path = SwiftUIMustaches;
 			sourceTree = "<group>";
 		};
 		31E6417419CADC100041421D /* Frameworks */ = {
@@ -195,38 +155,10 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		31A7DB2E19CEFACA0081C234 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		31A7DB3019CEFACA0081C234 /* MustacheAdjustmentFramework */ = {
+		31E6414619CAD4C10041421D /* SwiftUIMustaches */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 31A7DB4D19CEFACA0081C234 /* Build configuration list for PBXNativeTarget "MustacheAdjustmentFramework" */;
-			buildPhases = (
-				31A7DB2C19CEFACA0081C234 /* Sources */,
-				31A7DB2D19CEFACA0081C234 /* Frameworks */,
-				31A7DB2E19CEFACA0081C234 /* Headers */,
-				31A7DB2F19CEFACA0081C234 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MustacheAdjustmentFramework;
-			productName = MustacheAdjustment;
-			productReference = 31A7DB3119CEFACA0081C234 /* MustacheAdjustmentFramework.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		31E6414619CAD4C10041421D /* SwiftMustaches */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 31E6416619CAD4C10041421D /* Build configuration list for PBXNativeTarget "SwiftMustaches" */;
+			buildConfigurationList = 31E6416619CAD4C10041421D /* Build configuration list for PBXNativeTarget "SwiftUIMustaches" */;
 			buildPhases = (
 				31E6414319CAD4C10041421D /* Sources */,
 				31E6414419CAD4C10041421D /* Frameworks */,
@@ -238,11 +170,10 @@
 			);
 			dependencies = (
 				E7E6D9E62AD25A180035A290 /* PBXTargetDependency */,
-				31A7DB4419CEFACA0081C234 /* PBXTargetDependency */,
 			);
-			name = SwiftMustaches;
+			name = SwiftUIMustaches;
 			productName = SwiftMustaches;
-			productReference = 31E6414719CAD4C10041421D /* SwiftMustaches.app */;
+			productReference = 31E6414719CAD4C10041421D /* SwiftUIMustaches.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E7E6D9D22AD257160035A290 /* MustacheExtension */ = {
@@ -256,7 +187,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E7E6D9EC2AD30C4B0035A290 /* PBXTargetDependency */,
 			);
 			name = MustacheExtension;
 			productName = xxx;
@@ -274,9 +204,6 @@
 				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Tinker Software";
 				TargetAttributes = {
-					31A7DB3019CEFACA0081C234 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
 					31E6414619CAD4C10041421D = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
@@ -285,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 31E6414219CAD4C10041421D /* Build configuration list for PBXProject "SwiftMustaches" */;
+			buildConfigurationList = 31E6414219CAD4C10041421D /* Build configuration list for PBXProject "SwiftUIMustaches" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -299,21 +226,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				31E6414619CAD4C10041421D /* SwiftMustaches */,
-				31A7DB3019CEFACA0081C234 /* MustacheAdjustmentFramework */,
+				31E6414619CAD4C10041421D /* SwiftUIMustaches */,
 				E7E6D9D22AD257160035A290 /* MustacheExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		31A7DB2F19CEFACA0081C234 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		31E6414519CAD4C10041421D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,24 +252,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		31A7DB2C19CEFACA0081C234 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7E6D9EA2AD30A620035A290 /* MMView.swift in Sources */,
-				E7E6E8092ACC521000ED9E0D /* AsyncVision.swift in Sources */,
-				31A7DB5219CEFB8F0081C234 /* MustachePosition.swift in Sources */,
-				E7F37FAD2ACE5B230097FF35 /* MView.swift in Sources */,
-				E7DFB33E2AD0B005009FB6D9 /* MustacheAdjustment.swift in Sources */,
-				E7F37FA92ACDB2FB0097FF35 /* Extensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		31E6414319CAD4C10041421D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31E6414D19CAD4C10041421D /* SwiftMustaches.swift in Sources */,
+				31E6414D19CAD4C10041421D /* SwiftUIMustaches.swift in Sources */,
 				E7E6E80A2ACC568300ED9E0D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,101 +265,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CFA4162B0B96DD002E6AAD /* MustachView.swift in Sources */,
+				E7CFA4172B0B96E9002E6AAD /* AsyncVision.swift in Sources */,
 				E7E6D9D82AD257160035A290 /* PhotoEditingViewController.swift in Sources */,
+				E7CFA41C2B0B9971002E6AAD /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		31A7DB4419CEFACA0081C234 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 31A7DB3019CEFACA0081C234 /* MustacheAdjustmentFramework */;
-			targetProxy = 31A7DB4319CEFACA0081C234 /* PBXContainerItemProxy */;
-		};
 		E7E6D9E62AD25A180035A290 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E7E6D9D22AD257160035A290 /* MustacheExtension */;
 			targetProxy = E7E6D9E52AD25A180035A290 /* PBXContainerItemProxy */;
 		};
-		E7E6D9EC2AD30C4B0035A290 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 31A7DB3019CEFACA0081C234 /* MustacheAdjustmentFramework */;
-			targetProxy = E7E6D9EB2AD30C4B0035A290 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		31A7DB4919CEFACA0081C234 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MHEBPE6SV2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 4;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_MODULE_VERIFIER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MustacheAdjustmentFramework/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
-				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches.MustacheAdjustmentFramework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		31A7DB4A19CEFACA0081C234 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MHEBPE6SV2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 4;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_MODULE_VERIFIER = YES;
-				INFOPLIST_FILE = MustacheAdjustmentFramework/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
-				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches.MustacheAdjustmentFramework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		31E6416419CAD4C10041421D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -578,7 +407,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftMustaches/SwiftMustaches.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIMustaches/SwiftUIMustaches.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MHEBPE6SV2;
@@ -587,14 +416,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = SwiftMustaches/Info.plist;
+				INFOPLIST_FILE = SwiftUIMustaches/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches;
+				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftUIMustaches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -609,7 +438,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftMustaches/SwiftMustaches.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIMustaches/SwiftUIMustaches.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MHEBPE6SV2;
@@ -618,14 +447,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = SwiftMustaches/Info.plist;
+				INFOPLIST_FILE = SwiftUIMustaches/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches;
+				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftUIMustaches;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -667,7 +496,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches.MustacheExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftUIMustaches.MustacheExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -709,7 +538,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftMustaches.MustacheExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = software.tinker.SwiftUIMustaches.MustacheExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -721,16 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		31A7DB4D19CEFACA0081C234 /* Build configuration list for PBXNativeTarget "MustacheAdjustmentFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				31A7DB4919CEFACA0081C234 /* Debug */,
-				31A7DB4A19CEFACA0081C234 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		31E6414219CAD4C10041421D /* Build configuration list for PBXProject "SwiftMustaches" */ = {
+		31E6414219CAD4C10041421D /* Build configuration list for PBXProject "SwiftUIMustaches" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				31E6416419CAD4C10041421D /* Debug */,
@@ -739,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31E6416619CAD4C10041421D /* Build configuration list for PBXNativeTarget "SwiftMustaches" */ = {
+		31E6416619CAD4C10041421D /* Build configuration list for PBXNativeTarget "SwiftUIMustaches" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				31E6416719CAD4C10041421D /* Debug */,

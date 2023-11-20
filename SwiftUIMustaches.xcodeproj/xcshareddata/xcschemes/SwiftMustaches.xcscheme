@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "31A7DB3019CEFACA0081C234"
-               BuildableName = "MustacheAdjustmentFramework.framework"
-               BlueprintName = "MustacheAdjustmentFramework"
-               ReferencedContainer = "container:SwiftMustaches.xcodeproj">
+               BlueprintIdentifier = "31E6414619CAD4C10041421D"
+               BuildableName = "SwiftUIMustaches.app"
+               BlueprintName = "SwiftUIMustaches"
+               ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,6 +27,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "31E6414619CAD4C10041421D"
+            BuildableName = "SwiftUIMustaches.app"
+            BlueprintName = "SwiftUIMustaches"
+            ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
       </Testables>
    </TestAction>
@@ -40,15 +49,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31A7DB3019CEFACA0081C234"
-            BuildableName = "MustacheAdjustmentFramework.framework"
-            BlueprintName = "MustacheAdjustmentFramework"
-            ReferencedContainer = "container:SwiftMustaches.xcodeproj">
+            BlueprintIdentifier = "31E6414619CAD4C10041421D"
+            BuildableName = "SwiftUIMustaches.app"
+            BlueprintName = "SwiftUIMustaches"
+            ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -56,15 +66,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31A7DB3019CEFACA0081C234"
-            BuildableName = "MustacheAdjustmentFramework.framework"
-            BlueprintName = "MustacheAdjustmentFramework"
-            ReferencedContainer = "container:SwiftMustaches.xcodeproj">
+            BlueprintIdentifier = "31E6414619CAD4C10041421D"
+            BuildableName = "SwiftUIMustaches.app"
+            BlueprintName = "SwiftUIMustaches"
+            ReferencedContainer = "container:SwiftUIMustaches.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
