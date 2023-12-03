@@ -14,14 +14,15 @@ public typealias XImage = NSImage
 extension Image {
   public init(xImage: XImage) {
     self.init(nsImage: xImage)
-  }
+  } 
 }
 
 extension CIImage {
   
   /// Create a CIImage from an NSImage
   public convenience init?(xImage x : XImage ) {
-    if let tiffData = x.tiffRepresentation,
+    if x.size.width > 0 && x.size.height > 0,
+      let tiffData = x.tiffRepresentation,
        let bitmap = NSBitmapImageRep(data:tiffData) {
       self.init(bitmapImageRep: bitmap)
     } else {

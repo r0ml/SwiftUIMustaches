@@ -34,11 +34,17 @@ import Vision
     }
   }
   
-  private func getYOffset(_ xmin : CGFloat, _ xmax: CGFloat ) -> CGFloat {
-    let ar : CGFloat = CGFloat(mustacheImage.size.height) / CGFloat(mustacheImage.size.width)
-    return ( ( (xmax - xmin) *  ar * 0.5 ) / 2)
+  /*
+  private func getYOffset(_ xmin : CGPoint, _ xmax: CGPoint ) -> CGFloat {
+//    let ar : CGFloat = CGFloat(mustacheImage.size.height) / CGFloat(mustacheImage.size.width)
+    // scaled by width -- this gives us the midpoint?
+//   let mp = ( ( (xmax.x - xmin.x) *  ar ) / 2)
+    // the place
+    let yy = (xmax.y + xmin.y) / 2
+    return yy
   }
-
+*/
+  
   private func defaced() -> CIImage {
     guard var zz = CIImage.init(xImage: image) else { return CIImage() }
     let mi = CIImage.init(xImage: mustacheImage)!
@@ -48,19 +54,19 @@ import Vision
     for z in faces {
       if let kk = z.landmarks!.outerLips,
       
-      let xmin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.x < $1.x})?.x,
-      let xmax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.x < $1.x})?.x,
-      let ymax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.y < $1.y})?.y {
-        
-        let s = (xmax-xmin) / mi.extent.size.width
-
-        let origin = CGPoint(x: (xmin+xmax) /  2 - (s * mi.extent.width / 2) , // * (1 - CGFloat(cos(-roll))),
-                             y: g.height - ymax - getYOffset(xmin, xmax) + (s * mi.extent.height / 2))
+      let xmin = kk.pointsInImage(imageSize: g).min(by: {$0.x < $1.x}),
+         let xmax = kk.pointsInImage(imageSize: g).max(by: {$0.x < $1.x}) {
+//      let ymax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.y < $1.y})?.y {
         
         let x1 = kk.normalizedPoints.min(by: {$0.x < $1.x})!
         let x2 = kk.normalizedPoints.max(by: {$0.x < $1.x})!
         
         let angle = atan( (x2.y - x1.y) / (x2.x-x1.x) )
+
+        let s = (xmax.x-xmin.x) / mi.extent.size.width
+
+        let origin = CGPoint(x: (xmin.x+xmax.x) / 2 - (1+sin(angle)/2) * (s * mi.extent.width / 2)    , // * (1 - CGFloat(cos(-roll))),
+                             y: g.height - (xmin.y + xmax.y) / 2 + (sin(angle) / 2 ) * (s * mi.extent.height) /* + (s * mi.extent.height )  */ )
         
         let mi2 = mi
           .transformed(by: CGAffineTransform(scaleX: s, y: s))

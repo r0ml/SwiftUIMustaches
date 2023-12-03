@@ -53,11 +53,13 @@ class PhotoEditingViewController: NSViewController, PHContentEditingController {
     completionHandler(output)
   }
   
-  @objc var shouldShowCancelConfirmation: Bool {
+  var shouldShowCancelConfirmation: Bool {
     return false
   }
   
   func cancelContentEditing() {
     
   }
+  
+  
 }
