@@ -5,6 +5,8 @@ import CoreImage
 import Foundation
 import SwiftUI
 
+fileprivate let ctx : CIContext = CIContext.init(options: nil)
+
 #if os(macOS)
 import AppKit
 
@@ -28,6 +30,17 @@ extension CIImage {
   }
 }
 
+extension NSImage {
+  /// Create an NSImage from a CIImage
+  public convenience init(ciImage ci: CIImage ) {
+    if let cg = ctx.createCGImage(ci, from: ci.extent) {
+      self.init(cgImage: cg, size: CGSize(width: cg.width, height: cg.height))
+      return
+    }
+    self.init(size: ci.extent.size)
+  }
+}
+
 #elseif os(iOS)
 import UIKit
 public typealias XImage = UIImage
@@ -43,6 +56,18 @@ extension CIImage {
     self.init(image: x)
   }
 }
+
+extension UIImage {
+  /// Create a UIImage from a CIImage
+  public convenience init(ciImage ci: CIImage) {
+    if let cg = ctx.createCGImage(ci, from: ci.extent) {
+      self.init(cgImage: cg)
+      return
+    }
+    fatalError("creating UIImage from CIImage")
+  }
+}
+
 #endif
 
 extension XImage : @unchecked Sendable {}

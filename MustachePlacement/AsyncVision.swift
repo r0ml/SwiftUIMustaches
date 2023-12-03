@@ -15,7 +15,7 @@ public func allFaces(in cxiImage : CIImage, orientation ornt : CGImagePropertyOr
     allFaces(in: cxiImage, orientation: ornt) { ims in
       switch ims {
       case .success(let res): continuation.resume(returning: res)
-      case.failure(let err): continuation.resume(throwing: err)
+      case .failure(let err): continuation.resume(throwing: err)
       }
     }
   }
