@@ -49,8 +49,7 @@ public struct MustachView : View {
       if let kk = z.landmarks?.outerLips,
          let xmin : CGFloat = kk.pointsInImage(imageSize: g).min(by: {$0.x < $1.x})?.x,
          let xmax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.x < $1.x})?.x,
-         
-          let ymax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.y < $1.y})?.y,
+         let ymax : CGFloat = kk.pointsInImage(imageSize: g).max(by: {$0.y < $1.y})?.y,
          let roll = z.roll?.doubleValue {
         
         Image(xImage: mustacheImage).resizable().scaledToFit()

@@ -32,9 +32,9 @@ class PhotoEditingViewController: NSViewController, PHContentEditingController {
   }
   
   func finishContentEditing(completionHandler: @escaping ((PHContentEditingOutput?) -> Void)) {
-      let output = PHContentEditingOutput(contentEditingInput: self.input!)
+    let output = PHContentEditingOutput(contentEditingInput: self.input!)
     output.adjustmentData = PHAdjustmentData()
-      completionHandler(output)
+    completionHandler(output)
   }
   
   var shouldShowCancelConfirmation: Bool {
