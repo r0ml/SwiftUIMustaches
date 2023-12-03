@@ -18,6 +18,7 @@
 		E7E6D9E72AD25A290035A290 /* MustacheExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E7E6D9D32AD257160035A290 /* MustacheExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7E6D9ED2AD30DB80035A290 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
 		E7E6E80A2ACC568300ED9E0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */; };
+		E7F9B1D12B1CDD8700A7FA1D /* ImageWithFaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F9B1D02B1CDD8700A7FA1D /* ImageWithFaces.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E7E6E8052ACBB5E200ED9E0D /* SwiftUIMustaches.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIMustaches.entitlements; sourceTree = "<group>"; };
 		E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncVision.swift; sourceTree = "<group>"; };
 		E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E7F9B1D02B1CDD8700A7FA1D /* ImageWithFaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithFaces.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E7E6D9E92AD30A620035A290 /* MustachView.swift */,
+				E7F9B1D02B1CDD8700A7FA1D /* ImageWithFaces.swift */,
 				E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */,
 				E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */,
 			);
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F9B1D12B1CDD8700A7FA1D /* ImageWithFaces.swift in Sources */,
 				E7CFA4162B0B96DD002E6AAD /* MustachView.swift in Sources */,
 				E7CFA4172B0B96E9002E6AAD /* AsyncVision.swift in Sources */,
 				E7E6D9D82AD257160035A290 /* PhotoEditingViewController.swift in Sources */,

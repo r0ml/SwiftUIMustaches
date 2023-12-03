@@ -39,6 +39,15 @@ extension NSImage {
     }
     self.init(size: ci.extent.size)
   }
+  
+    // matches the iOS function to get jpegData
+  public func jpegData(compressionQuality: Float) -> Data? {
+    let cgImage = self.cgImage(forProposedRect: nil, context: nil, hints: nil)!
+    let bitmapRep = NSBitmapImageRep(cgImage: cgImage)
+    let jpegData = bitmapRep.representation(using: NSBitmapImageRep.FileType.jpeg, properties: [.compressionFactor: NSNumber(value: compressionQuality)])
+    return jpegData
+  }
+
 }
 
 #elseif os(iOS)
