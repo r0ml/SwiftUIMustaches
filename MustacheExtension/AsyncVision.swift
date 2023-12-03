@@ -1,7 +1,7 @@
 // Copyright (c) 1868 Charles Babbage
 // Found amongst his effects by r0ml
 
-/* Converts the Vision Framework face detection into an async/await interface */
+/// Converts the Vision Framework face detection into an async/await interface
 import Foundation
 import CoreImage
 import Vision

@@ -1,6 +1,7 @@
 // Copyright (c) 1868 Charles Babbage
 // Found amongst his effects by r0ml
 
+/// A Photos extension to put mustaches on faces.  Works on both iOS and macOS
 import Photos
 import PhotosUI
 import SwiftUI

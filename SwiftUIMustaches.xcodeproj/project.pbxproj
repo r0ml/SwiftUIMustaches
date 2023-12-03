@@ -94,21 +94,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31A7DB3219CEFACA0081C234 /* MustachePlacement */ = {
-			isa = PBXGroup;
-			children = (
-				E7E6D9E92AD30A620035A290 /* MustachView.swift */,
-				E7F9B1D02B1CDD8700A7FA1D /* ImageWithFaces.swift */,
-				E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */,
-				E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */,
-			);
-			path = MustachePlacement;
-			sourceTree = "<group>";
-		};
 		31E6413E19CAD4C10041421D = {
 			isa = PBXGroup;
 			children = (
-				31A7DB3219CEFACA0081C234 /* MustachePlacement */,
 				31E6414919CAD4C10041421D /* SwiftUIMustaches */,
 				E7E6D9D62AD257160035A290 /* MustacheExtension */,
 				31E6417419CADC100041421D /* Frameworks */,
@@ -149,6 +137,10 @@
 		E7E6D9D62AD257160035A290 /* MustacheExtension */ = {
 			isa = PBXGroup;
 			children = (
+				E7E6D9E92AD30A620035A290 /* MustachView.swift */,
+				E7F9B1D02B1CDD8700A7FA1D /* ImageWithFaces.swift */,
+				E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */,
+				E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */,
 				E7E6D9D72AD257160035A290 /* PhotoEditingViewController.swift */,
 				E7E6D9DC2AD257160035A290 /* Info.plist */,
 				E7E6D9DD2AD257160035A290 /* MustacheExtension.entitlements */,
