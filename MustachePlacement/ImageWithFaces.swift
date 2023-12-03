@@ -65,7 +65,7 @@ import Vision
 
         let s = (xmax.x-xmin.x) / mi.extent.size.width
 
-        let origin = CGPoint(x: (xmin.x+xmax.x) / 2 - (1+sin(angle)/2) * (s * mi.extent.width / 2)    , // * (1 - CGFloat(cos(-roll))),
+        let origin = CGPoint(x: (xmin.x+xmax.x) / 2 - cos(angle) * (s * mi.extent.width / 2) - sin(angle) * (s * mi.extent.height)    , // * (1 - CGFloat(cos(-roll))),
                              y: g.height - (xmin.y + xmax.y) / 2 + (sin(angle) / 2 ) * (s * mi.extent.height) /* + (s * mi.extent.height )  */ )
         
         let mi2 = mi
