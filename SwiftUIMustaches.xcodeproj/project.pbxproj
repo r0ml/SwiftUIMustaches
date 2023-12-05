@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		31E6414D19CAD4C10041421D /* SwiftUIMustaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6414C19CAD4C10041421D /* SwiftUIMustaches.swift */; };
 		31E6415419CAD4C10041421D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E6415319CAD4C10041421D /* Images.xcassets */; };
-		E7CFA4162B0B96DD002E6AAD /* MustachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6D9E92AD30A620035A290 /* MustachView.swift */; };
+		E7CFA4162B0B96DD002E6AAD /* MustacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6D9E92AD30A620035A290 /* MustacheView.swift */; };
 		E7CFA4172B0B96E9002E6AAD /* AsyncVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */; };
 		E7CFA41C2B0B9971002E6AAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */; };
 		E7E6D9D42AD257160035A290 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E6417519CADC100041421D /* PhotosUI.framework */; };
@@ -66,7 +66,7 @@
 		E7E6D9D72AD257160035A290 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		E7E6D9DC2AD257160035A290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7E6D9DD2AD257160035A290 /* MustacheExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MustacheExtension.entitlements; sourceTree = "<group>"; };
-		E7E6D9E92AD30A620035A290 /* MustachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustachView.swift; sourceTree = "<group>"; };
+		E7E6D9E92AD30A620035A290 /* MustacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheView.swift; sourceTree = "<group>"; };
 		E7E6E8032ACB1F0600ED9E0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7E6E8052ACBB5E200ED9E0D /* SwiftUIMustaches.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIMustaches.entitlements; sourceTree = "<group>"; };
 		E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncVision.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		E7E6D9D62AD257160035A290 /* MustacheExtension */ = {
 			isa = PBXGroup;
 			children = (
-				E7E6D9E92AD30A620035A290 /* MustachView.swift */,
+				E7E6D9E92AD30A620035A290 /* MustacheView.swift */,
 				E7F9B1D02B1CDD8700A7FA1D /* ImageWithFaces.swift */,
 				E7E6E8082ACC521000ED9E0D /* AsyncVision.swift */,
 				E7F37FA82ACDB2FB0097FF35 /* Extensions.swift */,
@@ -261,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F9B1D12B1CDD8700A7FA1D /* ImageWithFaces.swift in Sources */,
-				E7CFA4162B0B96DD002E6AAD /* MustachView.swift in Sources */,
+				E7CFA4162B0B96DD002E6AAD /* MustacheView.swift in Sources */,
 				E7CFA4172B0B96E9002E6AAD /* AsyncVision.swift in Sources */,
 				E7E6D9D82AD257160035A290 /* PhotoEditingViewController.swift in Sources */,
 				E7CFA41C2B0B9971002E6AAD /* Extensions.swift in Sources */,

@@ -5,7 +5,7 @@ import SwiftUI
 import Vision
 
 
-public struct MustachView : View {
+public struct MustacheView : View {
   var imageWithFaces : ImageWithFaces
   
   public init(imf: ImageWithFaces) {

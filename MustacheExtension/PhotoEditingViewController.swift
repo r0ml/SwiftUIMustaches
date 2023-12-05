@@ -15,7 +15,7 @@ class PhotoEditingViewController: NSViewController, PHContentEditingController {
   var imf = ImageWithFaces(image: NSImage() )
   
   override func loadView() {
-    self.view = NSHostingView(rootView: MustachView(imf: imf))
+    self.view = NSHostingView(rootView: MustacheView(imf: imf))
   }
     
   func canHandle(_ adjustmentData: PHAdjustmentData) -> Bool {
